@@ -1,5 +1,7 @@
 # Flutter provider boilerplate
 
+![alt flutter](https://github.com/suppanat2k/flutter_provider_boilerplate/assets/89376408/a97d11c1-1375-4662-ac8d-7604b03c776c)
+
 Add localizations
 
 ```sh
