@@ -13,6 +13,7 @@ dependencies:
     sdk: flutter
   get_it: ^7.6.8
   intl: ^0.18.1
+  provider: ^6.1.2
 
 dev_dependencies:
   flutter_test:
@@ -23,15 +24,15 @@ flutter:
   generate: true
   uses-material-design: true
 
-assets:
-  - assets/images/
-  - assets/logos/
-  - assets/icons/
+  assets:
+    - assets/
+    - assets/images/
+    - assets/logos/
+    - assets/icons/
 
-# uncomment when use fonts 
-# fonts:
-#   - family: Prompt
-#     fonts:
-#       - asset: assets/fonts/Prompt/Prompt-Bold.ttf
-#       - asset: assets/fonts/Prompt/Prompt-Medium.ttf
-#       - asset: assets/fonts/Prompt/Prompt-Regular.ttf
+  fonts:
+    - family: Prompt
+      fonts:
+        - asset: assets/fonts/Prompt/Prompt-Bold.ttf
+        - asset: assets/fonts/Prompt/Prompt-Medium.ttf
+        - asset: assets/fonts/Prompt/Prompt-Regular.ttf

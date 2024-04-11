@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_provider_boilerplate/core/constants/enum.dart';
-import 'package:flutter_provider_boilerplate/core/functions/main.dart';
 import 'package:flutter_provider_boilerplate/core/utils/locator.dart';
+import 'package:flutter_provider_boilerplate/home/view/home.dart';
+import 'package:flutter_provider_boilerplate/home/view_model/home_view_model.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   setupLocator();
@@ -14,29 +16,17 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        localizationsDelegates: L10n.localizationsDelegates,
-        supportedLocales: L10n.supportedLocales,
-        locale: locator<GlobalStateService>().locale,
-        home: const Home());
-  }
-}
-
-class Home extends StatefulWidget {
-  const Home({super.key});
-
-  @override
-  State<Home> createState() => _HomeState();
-}
-
-class _HomeState extends State<Home> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Text(getLangLocals(context).helloWorld),
-      ),
-    );
+    
+    return MultiProvider(
+        providers: [
+          ChangeNotifierProvider(create: (_) => HomeViewModel()),
+        ],
+        child: MaterialApp(
+            debugShowCheckedModeBanner: false,
+            localizationsDelegates: L10n.localizationsDelegates,
+            supportedLocales: L10n.supportedLocales,
+            locale: Locale.fromSubtags(
+                languageCode: locator<GlobalStateService>().langLocal ?? LangL10n.EN),
+            home: const Home()));
   }
 }

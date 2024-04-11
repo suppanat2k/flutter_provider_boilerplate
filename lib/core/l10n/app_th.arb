@@ -1,4 +1,9 @@
 {
     "helloWorld": "สวัสดีชาวโลก",
-    "hello": "สวัสดี! {username}"
+    "hello": "สวัสดี! {username}",
+    "countWarning": "เลขดังกล่าว จะไม่สามารถต่ำกว่าศูนย์",
+    "increment": "เพิ่ม",
+    "decrement": "ลด",
+    "english": "ภาษาอังกฤษ",
+    "thai": "ภาษาไทย"
 }
