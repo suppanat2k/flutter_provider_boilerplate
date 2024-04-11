@@ -1,0 +1,12 @@
+{
+    "helloWorld": "helloWorld",
+    "hello": "Hello! {username}",
+    "@hello": {
+        "description": "A welcome language",
+        "placeholder": {
+            "username": {
+                "type": "String"
+            }
+        }
+    }
+}

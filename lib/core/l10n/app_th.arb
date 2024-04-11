@@ -1,0 +1,4 @@
+{
+    "helloWorld": "สวัสดีชาวโลก",
+    "hello": "สวัสดี! {username}"
+}
