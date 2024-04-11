@@ -14,7 +14,6 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    locator<GlobalStateService>().setLocale(const Locale(LangL10n.TH));
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         localizationsDelegates: L10n.localizationsDelegates,

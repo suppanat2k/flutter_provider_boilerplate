@@ -1,5 +1,10 @@
 # Flutter provider boilerplate
 
+## Getting Started with flutter in provider library of state management
+
+![alt text](https://w7.pngwing.com/pngs/67/315/png-transparent-flutter-hd-logo-thumbnail.png)
+
+
 Add localizations
 
 ```sh
