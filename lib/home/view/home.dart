@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_provider_boilerplate/core/components/button_custom.dart';
 import 'package:flutter_provider_boilerplate/core/constants/enum.dart';
 import 'package:flutter_provider_boilerplate/core/functions/main.dart';
 import 'package:flutter_provider_boilerplate/core/theme/color.dart';
@@ -22,7 +23,7 @@ class _HomeState extends State<Home> {
 
     WidgetsBinding.instance.addPostFrameCallback((_) {
       //set view model when init state here.
-      _homeViewModel?.setCount(1);
+      // _homeViewModel?.setCount(1);
     });
 
     super.initState();
@@ -45,39 +46,19 @@ class _HomeState extends State<Home> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              InkWell(
-                onTap: () => context.read<HomeViewModel>().changeLangLocal(LangL10n.EN),
-                child: Container(
-                  padding: const EdgeInsets.all(10),
-                  decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(8)),
-                      color: ColorCustom.PRIMARY),
-                  child: Text(
-                    getLangLocals(context).english,
-                    style: const TextStyle(
-                        color: ColorCustom.WHITE,
-                        fontFamily: FontFamilyCustom.PRIMARY),
-                  ),
-                ),
+              ButtonCustom(
+                btnText: getLangLocals(context).english,
+                btnOnTap: () =>
+                    context.read<HomeViewModel>().changeLangLocal(LangL10n.EN),
               ),
               const SizedBox(
                 width: 20,
               ),
-              InkWell(
-                onTap: () => context.read<HomeViewModel>().changeLangLocal(LangL10n.TH),
-                child: Container(
-                  padding: const EdgeInsets.all(10),
-                  decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(8)),
-                      color: ColorCustom.PRIMARY),
-                  child: Text(
-                    getLangLocals(context).thai,
-                    style: const TextStyle(
-                        color: ColorCustom.WHITE,
-                        fontFamily: FontFamilyCustom.PRIMARY),
-                  ),
-                ),
-              )
+              ButtonCustom(
+                btnText: getLangLocals(context).thai,
+                btnOnTap: () =>
+                    context.read<HomeViewModel>().changeLangLocal(LangL10n.TH),
+              ),
             ],
           ),
           Center(
@@ -105,43 +86,23 @@ class _HomeState extends State<Home> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    InkWell(
-                      onTap: () => context
+                    ButtonCustom(
+                      btnText: getLangLocals(context).increment,
+                      btnOnTap: () => context
                           .read<HomeViewModel>()
                           .setCount(context.read<HomeViewModel>().count + 1),
-                      child: Container(
-                        padding: const EdgeInsets.all(20),
-                        decoration: const BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(8)),
-                            color: ColorCustom.GREEN),
-                        child: Text(
-                          getLangLocals(context).increment,
-                          style: const TextStyle(
-                              color: ColorCustom.WHITE,
-                              fontFamily: FontFamilyCustom.PRIMARY),
-                        ),
-                      ),
+                      btnColor: ColorCustom.GREEN,
                     ),
                     const SizedBox(
                       width: 20,
                     ),
-                    InkWell(
-                      onTap: () => context
+                    ButtonCustom(
+                      btnText: getLangLocals(context).decrement,
+                      btnOnTap: () => context
                           .read<HomeViewModel>()
                           .setCount(context.read<HomeViewModel>().count - 1),
-                      child: Container(
-                        padding: const EdgeInsets.all(20),
-                        decoration: const BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(8)),
-                            color: ColorCustom.RED),
-                        child: Text(
-                          getLangLocals(context).decrement,
-                          style: const TextStyle(
-                              color: ColorCustom.WHITE,
-                              fontFamily: FontFamilyCustom.PRIMARY),
-                        ),
-                      ),
-                    )
+                      btnColor: ColorCustom.RED,
+                    ),
                   ],
                 )
               ],

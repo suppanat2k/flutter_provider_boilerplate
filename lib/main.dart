@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_provider_boilerplate/core/constants/enum.dart';
+import 'package:flutter_provider_boilerplate/core/layout/layout.dart';
 import 'package:flutter_provider_boilerplate/core/utils/locator.dart';
 import 'package:flutter_provider_boilerplate/home/view/home.dart';
 import 'package:flutter_provider_boilerplate/home/view_model/home_view_model.dart';
@@ -27,6 +28,6 @@ class MainApp extends StatelessWidget {
             supportedLocales: L10n.supportedLocales,
             locale: Locale.fromSubtags(
                 languageCode: locator<GlobalStateService>().langLocal ?? LangL10n.EN),
-            home: const Home()));
+            home: MainLayout()));
   }
 }

@@ -13,5 +13,6 @@
     "increment": "Increment",
     "decrement": "Decrement",
     "english": "English",
-    "thai": "Thai"
+    "thai": "Thai",
+    "backToHome": "Back to home"
 }
