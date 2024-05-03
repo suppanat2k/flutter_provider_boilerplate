@@ -12,6 +12,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   get_it: ^7.6.8
+  http: ^1.2.1
   intl: ^0.18.1
   provider: ^6.1.2
 

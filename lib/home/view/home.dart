@@ -34,7 +34,7 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         title: SafeArea(
           child: Text(
-            getLangLocals(context).hello("User"),
+            getLangLocals(context).hello("Suppanat"),
             style: const TextStyle(fontFamily: FontFamilyCustom.PRIMARY),
           ),
         ),
