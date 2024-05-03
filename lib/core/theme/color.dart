@@ -7,4 +7,5 @@ class ColorCustom {
   static const Color GREEN_1 = Color.fromARGB(255, 29, 177, 75);
   static const Color WHITE = Color.fromARGB(255, 255, 255, 255);
   static const Color RED = Color.fromARGB(255, 219, 0, 0);
+  static const Color BORDER = Color.fromARGB(255,209,213,219);
 }

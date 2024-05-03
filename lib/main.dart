@@ -44,9 +44,9 @@ class _MainAppState extends State<MainApp> {
             supportedLocales: L10n.supportedLocales,
             locale: Locale.fromSubtags(
                 languageCode: locator<GlobalStateService>().langLocal ?? LangL10n.EN),
-            initialRoute: RouteConstants.home,
+            initialRoute: RouteConstants.layout,
             routes: {
-              RouteConstants.home:(context) => const MainLayout()
+              RouteConstants.layout:(context) => const MainLayout()
             },
           ));
   }
