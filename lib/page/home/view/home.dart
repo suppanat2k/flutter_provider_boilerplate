@@ -4,7 +4,7 @@ import 'package:flutter_provider_boilerplate/core/constants/enum.dart';
 import 'package:flutter_provider_boilerplate/core/functions/main.dart';
 import 'package:flutter_provider_boilerplate/core/theme/color.dart';
 import 'package:flutter_provider_boilerplate/core/theme/font_family.dart';
-import 'package:flutter_provider_boilerplate/home/view_model/home_view_model.dart';
+import 'package:flutter_provider_boilerplate/page/home/view_model/home_view_model.dart';
 import 'package:provider/provider.dart';
 
 class Home extends StatefulWidget {

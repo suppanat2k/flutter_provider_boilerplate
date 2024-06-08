@@ -3,8 +3,8 @@ import 'package:flutter_provider_boilerplate/core/components/button_custom.dart'
 import 'package:flutter_provider_boilerplate/core/functions/main.dart';
 import 'package:flutter_provider_boilerplate/core/layout/layout.dart';
 import 'package:flutter_provider_boilerplate/core/theme/color.dart';
-import 'package:flutter_provider_boilerplate/home/view/home.dart';
-import 'package:flutter_provider_boilerplate/home/view_model/home_view_model.dart';
+import 'package:flutter_provider_boilerplate/page/home/view/home.dart';
+import 'package:flutter_provider_boilerplate/page/home/view_model/home_view_model.dart';
 
 class NextPage extends StatefulWidget {
   const NextPage({super.key});

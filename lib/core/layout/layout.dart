@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_provider_boilerplate/home/view/home.dart';
-import 'package:flutter_provider_boilerplate/next_page/view/nextPage.dart';
+import 'package:flutter_provider_boilerplate/page/home/view/home.dart';
+import 'package:flutter_provider_boilerplate/page/next_page/view/nextPage.dart';
 
 class MainLayout extends StatefulWidget {
   final int? index;
