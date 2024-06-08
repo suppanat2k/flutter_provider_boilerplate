@@ -32,15 +32,6 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: SafeArea(
-          child: Text(
-            getLangLocals(context).hello("User"),
-            style: const TextStyle(fontFamily: FontFamilyCustom.PRIMARY),
-          ),
-        ),
-        centerTitle: true,
-      ),
       body: Column(
         children: [
           Row(
@@ -107,7 +98,7 @@ class _HomeState extends State<Home> {
                 )
               ],
             ),
-          ),
+          )
         ],
       ),
     );
