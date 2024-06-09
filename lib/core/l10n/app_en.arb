@@ -8,5 +8,11 @@
                 "type": "String"
             }
         }
-    }
+    },
+    "countWarning": "This number will not less than zero",
+    "increment": "Increment",
+    "decrement": "Decrement",
+    "english": "English",
+    "thai": "Thai",
+    "backToHome": "Back to home"
 }
