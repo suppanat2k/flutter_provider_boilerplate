@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_provider_boilerplate/core/constants/enum.dart';
 import 'package:get_it/get_it.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
@@ -82,7 +83,8 @@ class EnvironmentService {
         break;
     }
 
-    // debugPrint("env: $currentEnvValue");
+    debugPrint("App start in ${envName} mode ..");
+    debugPrint("env: ${currentEnvValue}");
 
     setEnv(currentEnvValue);
   }

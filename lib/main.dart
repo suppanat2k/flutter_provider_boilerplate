@@ -1,14 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_provider_boilerplate/core/constants/enum.dart';
+import 'package:flutter_provider_boilerplate/core/functions/main.dart';
 import 'package:flutter_provider_boilerplate/core/layout/layout.dart';
 import 'package:flutter_provider_boilerplate/core/theme/theme_constant.dart';
 import 'package:flutter_provider_boilerplate/core/utils/locator.dart';
 import 'package:flutter_provider_boilerplate/page/home/view_model/home_view_model.dart';
 import 'package:provider/provider.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
   setupLocator();
+
+  //Change file name to using env and add assets in pubspec
+  await dotenv.load(fileName: ".env.example");
+
+  String currentEnv = await getCurrentEnvironmentName();
+
+  locator<EnvironmentService>().loadDotEnvData(currentEnv);
+
   runApp(const MainApp());
 }
 

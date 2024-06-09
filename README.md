@@ -1,13 +1,20 @@
 # Flutter provider boilerplate
 
-![alt flutter](https://github.com/suppanat2k/flutter_provider_boilerplate/assets/89376408/a97d11c1-1375-4662-ac8d-7604b03c776c)
-
 Add localizations
 
 ```sh
 #add localizations to file /lib/base/l10n/app_en.arb, /lib/base/l10n/app_th.arb
 #after add wording to localizations file run this command for reload localizations
 flutter gen-l10n
+```
+
+Remote server pos
+
+```sh
+#need to remote ipv4 from local to link with adb port
+#on real device can use same tcp and port
+#EXAMPLE: if we want to remote with port 8000 and config port on device is 5000
+$ adb forward tcp:8000 tcp:5000
 ```
 
 Run app
