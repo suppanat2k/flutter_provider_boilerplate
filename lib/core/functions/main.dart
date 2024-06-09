@@ -9,6 +9,7 @@ import 'package:flutter_provider_boilerplate/core/constants/enum.dart';
 import 'package:flutter_provider_boilerplate/core/models/public_signature_model.dart';
 import 'package:flutter_provider_boilerplate/core/services/network_api_service.dart';
 import 'package:flutter_provider_boilerplate/core/utils/locator.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 import 'package:uuid/uuid.dart';
 
 PublicSignatureModel generateHashSignature({
@@ -42,8 +43,8 @@ PublicSignatureModel generateHashSignature({
 }
 
 Future<String> getCurrentEnvironmentName() async {
-  const envMode = String.fromEnvironment('ENV_MODE');
-  String env = envMode == Environments.DEV ? Environments.DEV : Environments.PROD;
+  PackageInfo envMode = await PackageInfo.fromPlatform();
+  String env = envMode.packageName.split(".").last;
   if (env == 'dev') return Environments.DEV;
   return Environments.PROD;
 }
